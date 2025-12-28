@@ -9,7 +9,8 @@
     "generate-token": "node ./util/GenerateTokenScript.js",
     "main_endpoints": "nodemon main_endpoints/server.js",
     "lint": "eslint .",
-    "cloud_api": "nodemon cloud_api/server.js"
+    "cloud_api": "nodemon cloud_api/server.js",
+    "dessert_api": "nodemon dessert_api/server.js"
   },
   "repository": {
     "type": "git",

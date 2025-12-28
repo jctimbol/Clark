@@ -18,7 +18,8 @@ import Messaging from './Pages/Messaging/Messaging.js';
 import Home from './Pages/Home/Home.js';
 import CardReader from './Pages/CardReader/CardReader.js';
 import AuditLogsPage from './Pages/AuditLog/AuditLog.js';
-
+import DessertPage from './Pages/Desserts/Desserts';
+import AdminDessertPage from './Pages/Desserts/AdminDesserts.js'
 // Declare an enum for permission check
 export const allowedIf = {
   UNAUTHENTICATED: 'UNAUTHENTICATED',
@@ -158,6 +159,14 @@ export const officerOrAdminRoutes = [
     redirect: '/',
     inAdminNavbar: true
   },
+  {
+    Component: AdminDessertPage,
+    path: '/dessert-admin',
+    pageName: 'Dessert Admin',
+    allowedIf: allowedIf.OFFICER_OR_ADMIN,
+    redirect: '/',
+    inAdminNavbar: true
+  },
   ...memberRoutes,
 ];
 
@@ -195,4 +204,9 @@ export const signedOutRoutes = [
     pageName: 'Email Preferences',
     hideFromShortcutSuggestions: true
   },
+  {
+    Component: DessertPage,
+    path: '/desserts',
+    pageName: 'Desserts'
+  }
 ];
